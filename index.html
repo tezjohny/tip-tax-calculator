@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="tiptax.png.png" type="image/x-icon">
+    <title>Tips & Tax Calculator App</title>
+</head>
+<body>
+       <div class="container">
+        <div class="header">
+            <div class="header-controls">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+                <button class="share-btn-header" id="shareHeaderBtn" aria-label="Share">📤</button>
+            </div>
+            <div class="header-title">
+                <span style="font-size: 2rem;">🧮</span>
+                <h1>Nigerian Tip & Tax Calculator</h1>
+            </div>
+            <p class="header-subtitle">Split bills with ease • VAT included</p>
+        </div>
+
+        <div class="calculator-grid">
+            <div class="card input-section">
+                <div class="form-group">
+                    <label>Bill Amount</label>
+                    <div class="currency-input">
+                        <span class="currency-symbol">₦</span>
+                        <input type="number" id="billAmount" class="bill-input" placeholder="0.00" step="0.01" min="0">
+                    </div>
+                    <p class="error-message" id="billError">Please enter a valid bill amount</p>
+                </div>
+
+                <div class="vat-toggle" id="vatToggleWrapper">
+                    <div class="vat-info">
+                        <p>Include VAT (7.5%)</p>
+                        <p>Nigerian Value Added Tax</p>
+                    </div>
+                    <div class="toggle-switch active" id="vatToggle">
+                        <div class="toggle-slider"></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Tip Percentage</label>
+                    <div class="tip-presets">
+                        <button class="tip-btn" data-tip="5">5%</button>
+                        <button class="tip-btn active" data-tip="10">10%</button>
+                        <button class="tip-btn" data-tip="15">15%</button>
+                        <button class="tip-btn" data-tip="20">20%</button>
+                        <button class="tip-btn" data-tip="25">25%</button>
+                        <button class="tip-btn" data-tip="50">50%</button>
+                    </div>
+                    <input type="number" id="customTip" class="custom-input" placeholder="Custom tip %" step="0.1" min="0">
+                    <p class="error-message" id="tipError">Please enter a valid tip percentage</p>
+                </div>
+
+                <div class="form-group">
+                    <label>Split Between (Optional)</label>
+                    <div class="people-group">
+                        <span style="font-size: 1.25rem;">👥</span>
+                        <input type="number" id="numPeople" class="people-input" placeholder="0" min="0">
+                        <span class="people-label" id="peopleLabel">people</span>
+                    </div>
+                    <p class="error-message" id="peopleError">Number must be 1 or greater</p>
+                </div>
+            </div>
+
+            <div class="card results-section">
+                <div class="results-content">
+                    <h2 class="results-title">Bill Summary</h2>
+
+                    <div class="breakdown">
+                        <div class="breakdown-item">
+                            <span class="breakdown-label">Subtotal</span>
+                            <span class="breakdown-value" id="subtotal">₦0.00</span>
+                        </div>
+
+                        <div class="breakdown-item" id="vatItem">
+                            <span class="breakdown-label">VAT (7.5%)</span>
+                            <span class="breakdown-value" id="vatAmount">₦0.00</span>
+                        </div>
+
+                        <div class="breakdown-item">
+                            <span class="breakdown-label">Tip (<span id="tipPercent">10</span>%)</span>
+                            <span class="breakdown-value" id="tipAmount">₦0.00</span>
+                        </div>
+
+                        <div class="breakdown-item total">
+                            <span class="breakdown-label">Total</span>
+                            <span class="breakdown-value" id="totalAmount">₦0.00</span>
+                        </div>
+                    </div>
+
+                    <div class="per-person" id="perPersonSection" style="display: none;">
+                        <div>
+                            <p class="per-person-label">Per Person</p>
+                            <p class="per-person-sublabel">Split <span id="splitCount">1</span> ways</p>
+                        </div>
+                        <span class="per-person-value" id="perPersonAmount">₦0.00</span>
+                    </div>
+
+                    <div class="btn-group">
+                        <button class="reset-btn" id="resetBtn">🔄 Reset</button>
+                        <button class="share-btn" id="shareBtn">📤 Share</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>💚 Made for Nigeria • VAT rate: 7.5%</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
