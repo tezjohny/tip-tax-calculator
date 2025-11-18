@@ -84,5 +84,4 @@ If you like this project:
 👉 Share the live link
 👉 Suggest improvements 🙏
 
-yaml
-Copy code
+
