@@ -26,4 +26,63 @@ A modern, mobile-friendly bill calculator that allows users to easily apply **ti
 ---
 
 ## 🧮 Calculation Logic
+VAT = 7.5% × bill amount (optional)
 
+Tip = tip percentage × bill amount
+
+Total = bill + VAT + tip
+
+Amount per person = total ÷ number of people
+
+---
+
+## 🛠 Tech Stack
+
+| Technology | Used For |
+|------------|----------|
+| HTML5 | Markup structure |
+| CSS3 | UI styling |
+| JavaScript | Calculation & logic |
+| GitHub Pages | Hosting |
+
+---
+
+## 📁 Project Structure
+
+📂 tip-tax-calculator
+┣ index.html
+┣ README.md
+┣ script.js
+┣ style.css
+┗ tiptax.png.png
+
+
+---
+
+## 🖼 Screenshot
+
+![App Preview](tiptax.png)
+
+---
+
+## 📦 Installation (Local)
+
+```sh
+git clone https://github.com/tezjohny/tip-tax-calculator.git
+cd tip-tax-calculator
+open index.html   # or double-click it
+🧑‍💻 Author
+Tez Johny
+
+📌 GitHub: https://github.com/tezjohny
+📌 Project Repo: https://github.com/tezjohny/tip-tax-calculator
+
+⭐ Support This Project
+If you like this project:
+
+👉 ⭐ Star the repository
+👉 Share the live link
+👉 Suggest improvements 🙏
+
+yaml
+Copy code
